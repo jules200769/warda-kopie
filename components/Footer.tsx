@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Mail, MessageCircle, MapPin, Instagram, Facebook } from 'lucide-react';
+import { Mail, MapPin, Instagram, Facebook } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const Footer: React.FC = () => {
   const handleScroll = (e: React.MouseEvent, id: string) => {
@@ -45,7 +46,7 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 group">
-                <MessageCircle size={18} className="text-emerald-500 group-hover:scale-110 transition-transform" />
+                <WhatsAppIcon size={18} className="text-emerald-500 group-hover:scale-110 transition-transform" />
                 <a 
                   href="https://wa.me/31649674309" 
                   target="_blank" 

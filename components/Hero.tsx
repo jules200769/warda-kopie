@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { ArrowRight, MessageCircle, Star, Mail } from 'lucide-react';
+import { ArrowRight, Star, Mail } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 interface HeroProps {
   onTrialClick: () => void;
@@ -50,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
                 rel="noopener noreferrer" 
                 className="bg-emerald-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all flex items-center gap-2 pr-6"
               >
-                <MessageCircle size={24} />
+                <WhatsAppIcon size={24} />
                 <span className="font-bold">WhatsApp</span>
               </a>
               <a href="mailto:Autorijschoolwarda@hotmail.com" className="bg-white text-slate-900 p-4 rounded-full shadow-lg border hover:scale-110 transition-all"><Mail size={24} /></a>

@@ -4,9 +4,9 @@ import {
   Mail, 
   MapPin, 
   ArrowRight, 
-  MessageCircle,
   X
 } from 'lucide-react';
+import WhatsAppIcon from './components/WhatsAppIcon';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TickerCarousel from './components/TickerCarousel';
@@ -73,7 +73,7 @@ const App: React.FC = () => {
                     <div className="space-y-6">
                       <div className="flex items-center gap-4 group">
                         <div className="bg-emerald-500/20 p-3 rounded-full text-emerald-300 group-hover:bg-emerald-500/40 transition-all">
-                          <MessageCircle size={24} />
+                          <WhatsAppIcon size={24} />
                         </div>
                         <div>
                           <p className="text-sm text-slate-400">WhatsApp</p>

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 interface NavbarProps {
   onContactClick: () => void;
@@ -72,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             rel="noopener noreferrer"
             className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-emerald-100"
           >
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
             <span>WhatsApp</span>
           </a>
         </div>
@@ -102,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             rel="noopener noreferrer"
             className="bg-emerald-500 text-white p-5 rounded-2xl font-black flex items-center justify-center gap-3 mt-4 shadow-xl active:scale-95 transition-transform"
           >
-            <MessageCircle size={22} />
+            <WhatsAppIcon size={22} />
             WHATSAPP
           </a>
         </div>
