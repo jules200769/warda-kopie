@@ -15,18 +15,18 @@ const SuccessGallery: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4">
       <div className="flex flex-col md:flex-row items-end justify-between gap-6 mb-12">
         <div className="max-w-2xl">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Geslaagde Leerlingen</h2>
-          <p className="text-lg text-slate-600">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Geslaagde Leerlingen</h2>
+          <p className="text-lg text-slate-200">
             Bekijk de trotse gezichten van leerlingen die hun rijbewijs hebben behaald bij Rijschool Warda. Jij bent de volgende!
           </p>
         </div>
-        <div className="flex items-center gap-4 bg-sky-50 px-6 py-4 rounded-2xl border border-sky-100">
+        <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl border border-white/20">
           <div className="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-white">
             <Award size={24} />
           </div>
           <div>
-            <div className="text-2xl font-bold text-slate-900">92%</div>
-            <div className="text-sm text-slate-500">Slagingspercentage</div>
+            <div className="text-2xl font-bold text-white">92%</div>
+            <div className="text-sm text-slate-300">Slagingspercentage</div>
           </div>
         </div>
       </div>
@@ -57,12 +57,12 @@ const SuccessGallery: React.FC = () => {
         
         {/* Empty states for new students */}
         {[1, 2, 3].map(i => (
-          <div key={i} className="hidden lg:flex items-center justify-center rounded-3xl border-2 border-dashed border-slate-200 bg-slate-50 aspect-[4/5] group hover:border-sky-300 transition-colors">
+          <div key={i} className="hidden lg:flex items-center justify-center rounded-3xl border-2 border-dashed border-white/20 bg-white/5 aspect-[4/5] group hover:border-sky-400/50 transition-colors">
             <div className="text-center p-6">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 mx-auto mb-4 group-hover:text-sky-500 transition-colors">
+              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-slate-400 mx-auto mb-4 group-hover:text-sky-300 transition-colors">
                 <Star size={24} />
               </div>
-              <p className="text-slate-400 font-medium group-hover:text-sky-500 transition-colors">Jouw foto hier?</p>
+              <p className="text-slate-400 font-medium group-hover:text-sky-300 transition-colors">Jouw foto hier?</p>
             </div>
           </div>
         ))}

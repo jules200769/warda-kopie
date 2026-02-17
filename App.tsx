@@ -9,8 +9,10 @@ import {
 } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import TickerCarousel from './components/TickerCarousel';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
+import GoogleReviews from './components/GoogleReviews';
 import SuccessGallery from './components/SuccessGallery';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -39,73 +41,81 @@ const App: React.FC = () => {
         <div id="home">
           <Hero onTrialClick={openTrialModal} />
         </div>
-        
+
+        <TickerCarousel />
+
         <section id="waarom" className="py-20 bg-white">
-          <Features />
+          <Features onTrialClick={openTrialModal} />
         </section>
 
-        <section id="pakketten" className="py-20 baby-blue-gradient">
-          <Pricing onSelectPackage={handleSelectPackage} />
-        </section>
+        <div className="page-gradient-white-to-blue">
+          <section id="pakketten" className="pt-20 pb-10 bg-transparent">
+            <Pricing onSelectPackage={handleSelectPackage} />
+          </section>
 
-        <section id="geslaagden" className="py-20 bg-white">
-          <SuccessGallery />
-        </section>
+          <section id="reviews" className="py-10 bg-transparent">
+            <GoogleReviews />
+          </section>
 
-        <section id="contact" className="py-20 baby-blue-gradient">
-          <div className="max-w-7xl mx-auto px-4">
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Neem contact op</h2>
-                  <p className="text-lg text-slate-600 mb-8">
-                    Heb je vragen over onze lessen of wil je direct een afspraak maken? Wij staan voor je klaar via WhatsApp en e-mail.
-                  </p>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4 group">
-                      <div className="bg-emerald-100 p-3 rounded-full text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white transition-all">
-                        <MessageCircle size={24} />
-                      </div>
-                      <div>
-                        <p className="text-sm text-slate-500">WhatsApp</p>
-                        <a 
-                          href="https://wa.me/31649674309" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-lg font-semibold hover:text-emerald-600 transition-colors"
-                        >
-                          06 49674309
-                        </a>
-                      </div>
-                    </div>
+          <section id="geslaagden" className="pt-10 pb-20 bg-transparent">
+            <SuccessGallery />
+          </section>
+
+          <section id="contact" className="py-20 bg-transparent">
+            <div className="max-w-7xl mx-auto px-4">
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Neem contact op</h2>
+                    <p className="text-lg text-slate-200 mb-8">
+                      Heb je vragen over onze lessen of wil je direct een afspraak maken? Wij staan voor je klaar via WhatsApp en e-mail.
+                    </p>
                     
-                    <div className="flex items-start gap-4 group">
-                      <div className="bg-sky-100 p-3 rounded-full text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-all mt-1">
-                        <Mail size={24} />
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4 group">
+                        <div className="bg-emerald-500/20 p-3 rounded-full text-emerald-300 group-hover:bg-emerald-500/40 transition-all">
+                          <MessageCircle size={24} />
+                        </div>
+                        <div>
+                          <p className="text-sm text-slate-400">WhatsApp</p>
+                          <a 
+                            href="https://wa.me/31649674309" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-lg font-semibold text-white hover:text-emerald-300 transition-colors"
+                          >
+                            06 49674309
+                          </a>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-sm text-slate-500">E-mail</p>
-                        <a href="mailto:Autorijschoolwarda@hotmail.com" className="text-lg font-semibold hover:text-sky-600 transition-colors block">Autorijschoolwarda@hotmail.com</a>
-                        <a href="mailto:info@rijschoolwarda.nl" className="text-lg font-semibold hover:text-sky-600 transition-colors block">info@rijschoolwarda.nl</a>
+                      
+                      <div className="flex items-start gap-4 group">
+                        <div className="bg-sky-500/20 p-3 rounded-full text-sky-300 group-hover:bg-sky-500/40 transition-all mt-1">
+                          <Mail size={24} />
+                        </div>
+                        <div>
+                          <p className="text-sm text-slate-400">E-mail</p>
+                          <a href="mailto:Autorijschoolwarda@hotmail.com" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">Autorijschoolwarda@hotmail.com</a>
+                          <a href="mailto:info@rijschoolwarda.nl" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">info@rijschoolwarda.nl</a>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="flex items-center gap-4 group">
-                      <div className="bg-sky-100 p-3 rounded-full text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-all">
-                        <MapPin size={24} />
-                      </div>
-                      <div>
-                        <p className="text-sm text-slate-500">Locatie</p>
-                        <p className="text-lg font-semibold">Udenhout, Nederland</p>
+                      <div className="flex items-center gap-4 group">
+                        <div className="bg-sky-500/20 p-3 rounded-full text-sky-300 group-hover:bg-sky-500/40 transition-all">
+                          <MapPin size={24} />
+                        </div>
+                        <div>
+                          <p className="text-sm text-slate-400">Locatie</p>
+                          <p className="text-lg font-semibold text-white">Udenhout, Nederland</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                <ContactForm />
-             </div>
-          </div>
-        </section>
+                  
+                  <ContactForm />
+               </div>
+            </div>
+          </section>
+        </div>
       </main>
 
       {/* Modal Overlay */}

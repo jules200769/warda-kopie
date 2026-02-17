@@ -1,86 +1,63 @@
-
 import React from 'react';
-import { 
-  Award, 
-  Clock, 
-  Heart, 
-  Car, 
-  CheckCircle2, 
-  ShieldCheck, 
-  UserCheck 
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-const Features: React.FC = () => {
-  const features = [
-    {
-      title: 'Hoog slagingspercentage',
-      desc: 'Onze leerlingen slagen vaak in één keer door onze doelgerichte training en jarenlange ervaring.',
-      icon: Award
-    },
-    {
-      title: 'Betrouwbare begeleiding',
-      desc: 'Sinds 2009 staan wij bekend om onze eerlijke en professionele instructeurs in Udenhout.',
-      icon: ShieldCheck
-    },
-    {
-      title: 'Persoonlijke aanpak',
-      desc: 'Iedere leerling is anders. Wij passen onze lessen aan op jouw tempo en leerbehoeften.',
-      icon: UserCheck
-    },
-    {
-      title: 'Flexibele lestijden',
-      desc: 'Lessen wanneer het jou uitkomt, ook in de avonduren of op zaterdag.',
-      icon: Clock
-    },
-    {
-      title: 'Moderne lesauto',
-      desc: 'Leer rijden in een comfortabele, veilige en moderne Volkswagen Golf.',
-      icon: Car
-    },
-    {
-      title: 'Geduldige instructeurs',
-      desc: 'Geen stress achter het stuur. Wij blijven altijd rustig en geduldig, zoals we al 15+ jaar doen.',
-      icon: Heart
+interface FeaturesProps {
+  onTrialClick: () => void;
+}
+
+const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
+  const handleScrollToPakketten = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.querySelector('#pakketten');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-  ];
+  };
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-          Waarom kiezen voor Rijschool Warda?
-        </h2>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          Met ervaring sinds 2009 bieden wij kwalitatieve rijlessen in een vertrouwde omgeving, zodat jij met een veilig gevoel je rijbewijs haalt.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map((f, i) => (
-          <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 hover:border-sky-200 hover:shadow-xl transition-all duration-300 group">
-            <div className="w-14 h-14 bg-sky-50 text-sky-500 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-              <f.icon size={28} />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">{f.title}</h3>
-            <p className="text-slate-600 leading-relaxed">{f.desc}</p>
+    <div className="w-full pl-4 pr-0 lg:pl-8 xl:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))]">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 items-stretch">
+        {/* Linkerkolom: tekst + knoppen */}
+        <div className="flex flex-col justify-center max-w-2xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            Rijles Udenhout
+          </h2>
+          <p className="text-slate-600 leading-relaxed mb-4">
+            Bij Rijschool Warda krijg je kwalitatieve rijlessen in een vertrouwde omgeving. Sinds 2009 helpen wij leerlingen uit Udenhout en omgeving met een persoonlijke aanpak, zodat jij met een veilig gevoel je rijbewijs haalt.
+          </p>
+          <p className="text-slate-600 leading-relaxed mb-4">
+            Wij bereiden je doelgericht voor op het CBR-examen, met ervaren en geduldige instructeurs en een moderne Volkswagen Golf. Geen wachtlijst — je kunt direct starten.
+          </p>
+          <p className="text-slate-600 leading-relaxed mb-8">
+            Benieuwd of rijles bij ons bij je past? Vraag een gratis proefles aan of bekijk onze tarieven.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <button
+              type="button"
+              onClick={onTrialClick}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-colors"
+            >
+              Gratis Proefles
+              <ArrowRight size={20} />
+            </button>
+            <a
+              href="#pakketten"
+              onClick={handleScrollToPakketten}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#1e3a5f] hover:bg-[#152a47] text-white font-semibold rounded-xl transition-colors"
+            >
+              Tarieven
+              <ArrowRight size={20} />
+            </a>
           </div>
-        ))}
-      </div>
-      
-      <div className="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="text-white">
-          <h3 className="text-2xl font-bold mb-2">15+ Jaar ervaring</h3>
-          <p className="text-slate-400 max-w-md">Sinds 2009 helpen wij leerlingen uit Udenhout en omgeving met succes aan hun rijbewijs.</p>
         </div>
-        <div className="flex gap-4">
-          <div className="flex items-center gap-2 text-white">
-            <CheckCircle2 className="text-sky-400" size={20} />
-            <span className="font-medium">Direct starten</span>
-          </div>
-          <div className="flex items-center gap-2 text-white">
-            <CheckCircle2 className="text-sky-400" size={20} />
-            <span className="font-medium">Geen wachtlijst</span>
-          </div>
+
+        {/* Rechterkolom: afbeelding – grenst aan rechterzijde van de site */}
+        <div className="relative min-h-[420px] lg:min-h-[520px] rounded-l-2xl overflow-hidden">
+          <img
+            src="./waarom-achtergrond.jpg"
+            alt="Interieur lesauto Rijschool Warda"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
       </div>
     </div>

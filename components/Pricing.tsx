@@ -1,12 +1,14 @@
 
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
+import { useInView } from '../hooks/useInView';
 
 interface PricingProps {
   onSelectPackage: (packageName: string) => void;
 }
 
 const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
+  const { ref: gridRef, isInView } = useInView({ threshold: 0.1 });
   const packs = [
     {
       name: "Losse Rijles",
@@ -47,11 +49,12 @@ const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {packs.map((pack, i) => (
           <div 
             key={i} 
-            className={`relative bg-white rounded-3xl p-8 border-2 transition-all duration-300 hover:shadow-2xl flex flex-col ${pack.popular ? 'border-sky-500 scale-105 z-10' : 'border-transparent'}`}
+            className={`relative bg-white rounded-3xl p-8 border-2 transition-all duration-300 hover:shadow-2xl flex flex-col ${pack.popular ? 'border-sky-500 scale-105 z-10' : 'border-transparent'} ${!isInView ? 'opacity-0' : 'animate-in-view'}`}
+            style={isInView ? { animationDelay: `${i * 120}ms` } : undefined}
           >
             {pack.popular && (
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sky-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
