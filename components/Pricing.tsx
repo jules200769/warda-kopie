@@ -43,7 +43,7 @@ const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
   return (
     <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Onze Tarieven</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Mijn Tarieven</h2>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
           Kies het pakket dat het beste bij jouw leerstijl past. Alle prijzen zijn inclusief BTW en het praktijkexamen.
         </p>

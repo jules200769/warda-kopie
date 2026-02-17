@@ -23,7 +23,7 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
             Rijles Udenhout
           </h2>
           <p className="text-slate-600 leading-relaxed mb-8">
-            Sinds 2009 bieden wij persoonlijke rijlessen in een vertrouwde omgeving voor leerlingen uit Udenhout en omgeving. Met ervaren instructeurs en een moderne Volkswagen Golf bereiden wij je doelgericht voor op het CBR-examen — zonder wachtlijst.
+            Sinds 2009 bied ik persoonlijke rijlessen in een vertrouwde omgeving voor leerlingen uit Udenhout en omgeving. Als ervaren instructeur met een moderne Volkswagen Golf bereid ik je doelgericht voor op het CBR-examen — zonder wachtlijst.
           </p>
           <div className="flex flex-wrap gap-4">
             <button

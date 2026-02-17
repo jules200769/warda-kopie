@@ -67,7 +67,7 @@ const App: React.FC = () => {
                   <div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Neem contact op</h2>
                     <p className="text-lg text-slate-200 mb-8">
-                      Heb je vragen over onze lessen of wil je direct een afspraak maken? Wij staan voor je klaar via WhatsApp en e-mail.
+                      Heb je vragen over mijn lessen of wil je direct een afspraak maken? Ik sta voor je klaar via WhatsApp en e-mail.
                     </p>
                     
                     <div className="space-y-6">

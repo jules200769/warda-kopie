@@ -13,7 +13,7 @@ const WhatsAppButton: React.FC = () => {
     >
       <WhatsAppIcon size={32} />
       <span className="absolute right-full mr-4 bg-white text-slate-900 px-3 py-1.5 rounded-lg text-sm font-bold shadow-md whitespace-nowrap opacity-0 pointer-events-none md:group-hover:opacity-100 transition-opacity">
-        WhatsApp ons!
+        WhatsApp mij!
       </span>
     </a>
   );

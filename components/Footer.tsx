@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="mb-6 leading-relaxed">
-              Sinds 2009 bieden wij professionele rijopleidingen in Udenhout en omgeving. Jouw veiligheid en succes zijn onze hoogste prioriteit.
+              Sinds 2009 bied ik professionele rijopleidingen in Udenhout en omgeving. Jouw veiligheid en succes zijn mijn hoogste prioriteit.
             </p>
             <div className="flex gap-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all transform hover:-translate-y-1">

@@ -32,7 +32,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialMessage = '', isModal 
           <CheckCircle size={40} />
         </div>
         <h3 className="text-2xl font-bold text-slate-900 mb-2">Aanvraag ontvangen!</h3>
-        <p className="text-slate-600">We nemen binnen 24 uur contact met je op.</p>
+        <p className="text-slate-600">Ik neem binnen 24 uur contact met je op.</p>
       </div>
     );
   }

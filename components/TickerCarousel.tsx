@@ -2,11 +2,11 @@ import React from 'react';
 
 const PHRASES = [
   'De middag, avond of weekend',
-  'Vriendelijke & geduldige instructeurs',
+  'Vriendelijke & geduldige instructeur',
   'CBR erkende rijschool',
   'Eerlijk advies',
   'Niet gereden rijlessen retour',
-  'Mannelijke en vrouwelijke rijinstructeur aanwezig',
+  'Ervaren en betrouwbare instructeur',
   'Hoog slagingspercentage',
   'Moderne lesauto',
   'Persoonlijke aanpak',
