@@ -45,12 +45,12 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed top-4 left-4 right-4 z-50 rounded-2xl transition-all duration-300 ${scrolled ? 'bg-white/40 backdrop-blur-xl shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <a href="#home" onClick={handleLogoClick} className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:rotate-12 transition-transform">W</div>
-          <span className="font-bold text-xl tracking-tight text-slate-900">
-            Rijschool <span className="text-sky-500">Warda</span>
+          <span className={`font-bold text-xl tracking-tight transition-colors duration-300 ${scrolled ? 'text-slate-900' : 'text-white'}`}>
+            Rijschool <span className={scrolled ? 'text-sky-500' : 'text-white'}>Warda</span>
           </span>
         </a>
 
@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-slate-600 hover:text-sky-500 font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-sky-500 after:transition-all hover:after:w-full"
+              className={`font-medium transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:transition-all hover:after:w-full ${scrolled ? 'text-slate-600 hover:text-sky-500 after:bg-sky-500' : 'text-white hover:text-white/90 after:bg-white'}`}
             >
               {link.name}
             </a>
@@ -78,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-slate-900 p-2 focus:outline-none" onClick={() => setIsOpen(!isOpen)} aria-label="Menu openen">
+        <button className={`md:hidden p-2 focus:outline-none transition-colors duration-300 ${scrolled ? 'text-slate-900' : 'text-white'}`} onClick={() => setIsOpen(!isOpen)} aria-label="Menu openen">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
