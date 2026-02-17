@@ -59,10 +59,10 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
           
           <div className="mt-14 flex items-center gap-6">
             <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map(i => (
+              {['/review-1.png', '/review-2.png', '/review-3.png', '/review-4.png'].map((src, i) => (
                 <img 
                   key={i} 
-                  src={`https://picsum.photos/100/100?random=${i + 40}`} 
+                  src={src} 
                   alt="Tevreden leerling" 
                   className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-md" 
                 />
