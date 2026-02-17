@@ -14,17 +14,17 @@ const Features: React.FC = () => {
   const features = [
     {
       title: 'Hoog slagingspercentage',
-      desc: 'Onze leerlingen slagen vaak in één keer door onze doelgerichte training.',
+      desc: 'Onze leerlingen slagen vaak in één keer door onze doelgerichte training en jarenlange ervaring.',
       icon: Award
     },
     {
       title: 'Betrouwbare begeleiding',
-      desc: 'Wij staan bekend om onze eerlijke en professionele instructeurs.',
+      desc: 'Sinds 2009 staan wij bekend om onze eerlijke en professionele instructeurs in Udenhout.',
       icon: ShieldCheck
     },
     {
       title: 'Persoonlijke aanpak',
-      desc: 'Iedere leerling is anders. Wij passen onze lessen aan op jouw tempo.',
+      desc: 'Iedere leerling is anders. Wij passen onze lessen aan op jouw tempo en leerbehoeften.',
       icon: UserCheck
     },
     {
@@ -39,7 +39,7 @@ const Features: React.FC = () => {
     },
     {
       title: 'Geduldige instructeurs',
-      desc: 'Geen stress achter het stuur. Wij blijven altijd rustig en geduldig.',
+      desc: 'Geen stress achter het stuur. Wij blijven altijd rustig en geduldig, zoals we al 15+ jaar doen.',
       icon: Heart
     }
   ];
@@ -51,7 +51,7 @@ const Features: React.FC = () => {
           Waarom kiezen voor Rijschool Warda?
         </h2>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          Wij bieden kwalitatieve rijlessen in een vertrouwde omgeving, zodat jij met een veilig gevoel je rijbewijs haalt.
+          Met ervaring sinds 2009 bieden wij kwalitatieve rijlessen in een vertrouwde omgeving, zodat jij met een veilig gevoel je rijbewijs haalt.
         </p>
       </div>
 
@@ -69,8 +69,8 @@ const Features: React.FC = () => {
       
       <div className="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="text-white">
-          <h3 className="text-2xl font-bold mb-2">Een comfortabele leeromgeving</h3>
-          <p className="text-slate-400 max-w-md">Leer rijden in een ontspannen sfeer waarin fouten maken mag, want daar leer je het meeste van.</p>
+          <h3 className="text-2xl font-bold mb-2">15+ Jaar ervaring</h3>
+          <p className="text-slate-400 max-w-md">Sinds 2009 helpen wij leerlingen uit Udenhout en omgeving met succes aan hun rijbewijs.</p>
         </div>
         <div className="flex gap-4">
           <div className="flex items-center gap-2 text-white">
