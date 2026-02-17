@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold text-lg mb-6">Links</h4>
             <ul className="space-y-4">
               <li><a href="#home" onClick={(e) => handleScroll(e, '#home')} className="hover:text-white hover:pl-2 transition-all">Home</a></li>
-              <li><a href="#waarom" onClick={(e) => handleScroll(e, '#waarom')} className="hover:text-white hover:pl-2 transition-all">Waarom Warda?</a></li>
+              <li><a href="#waarom" onClick={(e) => handleScroll(e, '#waarom')} className="hover:text-white hover:pl-2 transition-all">Over Mij</a></li>
               <li><a href="#pakketten" onClick={(e) => handleScroll(e, '#pakketten')} className="hover:text-white hover:pl-2 transition-all">Lespakketten</a></li>
               <li><a href="#geslaagden" onClick={(e) => handleScroll(e, '#geslaagden')} className="hover:text-white hover:pl-2 transition-all">Geslaagden</a></li>
               <li><a href="#contact" onClick={(e) => handleScroll(e, '#contact')} className="hover:text-white hover:pl-2 transition-all font-semibold text-sky-500">Gratis Proefles</a></li>

@@ -19,13 +19,15 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 items-stretch">
         {/* Linkerkolom: tekst + knoppen */}
         <div className="flex flex-col justify-center max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Rijles Udenhout
-          </h2>
-          <p className="text-slate-600 leading-relaxed mb-8">
-            Sinds 2009 bied ik persoonlijke rijlessen in een vertrouwde omgeving voor leerlingen uit Udenhout en omgeving. Als ervaren instructeur met een moderne Volkswagen Golf bereid ik je doelgericht voor op het CBR-examen — zonder wachtlijst.
-          </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="bg-sky-500/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-sky-200/50 shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Over Mij
+            </h2>
+            <p className="text-slate-700 leading-relaxed">
+              Sinds 2009 ben ik jouw betrouwbare rij-instructeur in Udenhout en omgeving. Met jarenlange ervaring en een passie voor lesgeven, help ik je op een persoonlijke en geduldige manier naar je rijbewijs. Ik werk met een moderne Volkswagen Golf en zorg voor een veilige, ontspannen leeromgeving waar jij je op je gemak voelt. Mijn doel is niet alleen dat je slaagt voor je examen, maar ook dat je een zelfverzekerde en veilige bestuurder wordt. Geen wachtlijsten, directe aandacht en een aanpak die bij jou past — dat is wat je van mij kunt verwachten.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 mt-8">
             <button
               type="button"
               onClick={onTrialClick}

@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Waarom', href: '#waarom' },
+    { name: 'Over Mij', href: '#waarom' },
     { name: 'Pakketten', href: '#pakketten' },
     { name: 'Geslaagden', href: '#geslaagden' },
     { name: 'Contact', href: '#contact' },
