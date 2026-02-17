@@ -183,8 +183,9 @@ const SuccessGallery: React.FC = () => {
               <Award size={24} />
             </div>
             <div className="text-left">
-              <div className="text-2xl font-bold text-white">72%</div>
+              <div className="text-2xl font-bold text-white">83%</div>
               <div className="text-sm text-slate-300">Slagingspercentage</div>
+              <div className="text-xs text-slate-200 mt-1">Van leerlingen die in één keer geslaagd zijn</div>
             </div>
           </div>
         </div>
