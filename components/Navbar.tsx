@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 
-// Added NavbarProps interface to fix type error in App.tsx where onContactClick is passed
 interface NavbarProps {
   onContactClick: () => void;
 }
@@ -31,10 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
     const element = document.getElementById(targetId);
     
     if (element) {
-      // Sluit mobiel menu direct
       setIsOpen(false);
-      
-      // Gebruik scrollIntoView met offset handling via CSS scroll-margin-top
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
@@ -70,13 +66,14 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
               {link.name}
             </a>
           ))}
-          {/* Use the passed onContactClick handler if needed, or keep standard tel link */}
           <a 
-            href="tel:0649674309" 
-            className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-sky-100"
+            href="https://wa.me/31649674309" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-emerald-100"
           >
-            <Phone size={18} />
-            <span>Bel Nu</span>
+            <MessageCircle size={18} />
+            <span>WhatsApp</span>
           </a>
         </div>
 
@@ -100,11 +97,13 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             </a>
           ))}
           <a 
-            href="tel:0649674309" 
-            className="bg-sky-500 text-white p-5 rounded-2xl font-black flex items-center justify-center gap-3 mt-4 shadow-xl active:scale-95 transition-transform"
+            href="https://wa.me/31649674309" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-emerald-500 text-white p-5 rounded-2xl font-black flex items-center justify-center gap-3 mt-4 shadow-xl active:scale-95 transition-transform"
           >
-            <Phone size={22} />
-            BEL DIRECT
+            <MessageCircle size={22} />
+            WHATSAPP
           </a>
         </div>
       </div>

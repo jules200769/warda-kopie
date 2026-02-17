@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { 
-  Phone, 
   Mail, 
   MapPin, 
   ArrowRight, 
@@ -59,17 +58,24 @@ const App: React.FC = () => {
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold mb-6">Neem contact op</h2>
                   <p className="text-lg text-slate-600 mb-8">
-                    Heb je vragen over onze lessen of wil je direct een afspraak maken? Wij staan voor je klaar.
+                    Heb je vragen over onze lessen of wil je direct een afspraak maken? Wij staan voor je klaar via WhatsApp en e-mail.
                   </p>
                   
                   <div className="space-y-6">
                     <div className="flex items-center gap-4 group">
-                      <div className="bg-sky-100 p-3 rounded-full text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-all">
-                        <Phone size={24} />
+                      <div className="bg-emerald-100 p-3 rounded-full text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                        <MessageCircle size={24} />
                       </div>
                       <div>
-                        <p className="text-sm text-slate-500">Telefoon</p>
-                        <a href="tel:0649674309" className="text-lg font-semibold hover:text-sky-600 transition-colors">06 49674309</a>
+                        <p className="text-sm text-slate-500">WhatsApp</p>
+                        <a 
+                          href="https://wa.me/31649674309" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-lg font-semibold hover:text-emerald-600 transition-colors"
+                        >
+                          06 49674309
+                        </a>
                       </div>
                     </div>
                     

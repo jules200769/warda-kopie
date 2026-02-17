@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
+import { Mail, MessageCircle, MapPin, Instagram, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const handleScroll = (e: React.MouseEvent, id: string) => {
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="mb-6 leading-relaxed">
-              Professionele rijopleidingen in Udenhout en omgeving. Jouw veiligheid en succes zijn onze hoogste prioriteit.
+              Sinds 2009 bieden wij professionele rijopleidingen in Udenhout en omgeving. Jouw veiligheid en succes zijn onze hoogste prioriteit.
             </p>
             <div className="flex gap-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all transform hover:-translate-y-1">
@@ -45,8 +45,15 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 group">
-                <Phone size={18} className="text-sky-500 group-hover:scale-110 transition-transform" />
-                <a href="tel:0649674309" className="hover:text-white transition-colors">06 49674309</a>
+                <MessageCircle size={18} className="text-emerald-500 group-hover:scale-110 transition-transform" />
+                <a 
+                  href="https://wa.me/31649674309" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-white transition-colors"
+                >
+                  WhatsApp: 06 49674309
+                </a>
               </li>
               <li className="flex items-start gap-3 group">
                 <Mail size={18} className="text-sky-500 group-hover:scale-110 transition-transform mt-1 shrink-0" />
