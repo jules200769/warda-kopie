@@ -29,7 +29,7 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
             <button
               type="button"
               onClick={onTrialClick}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-colors animate-orange-glow"
             >
               Gratis Proefles
               <ArrowRight size={20} />
@@ -37,7 +37,7 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
             <a
               href="#pakketten"
               onClick={handleScrollToPakketten}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#1e3a5f] hover:bg-[#152a47] text-white font-semibold rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#1e3a5f] hover:bg-[#152a47] text-white font-semibold rounded-xl transition-colors animate-sky-glow"
             >
               Tarieven
               <ArrowRight size={20} />

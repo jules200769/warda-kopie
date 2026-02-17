@@ -133,7 +133,7 @@ const SuccessGallery: React.FC = () => {
     if (cardsMoved !== 0) {
       setIndex((i) => i - cardsMoved);
     }
-  };
+      };
 
   // Mouse events
   const onMouseDown = (e: React.MouseEvent) => {

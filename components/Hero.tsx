@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
             <button 
               onClick={onTrialClick}
-              className="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl shadow-sky-200 flex items-center justify-center gap-2 transition-all hover:-translate-y-1 active:scale-95"
+              className="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl shadow-sky-200 flex items-center justify-center gap-2 transition-all hover:-translate-y-1 active:scale-95 animate-sky-glow"
             >
               Gratis proefles aanvragen
               <ArrowRight size={22} />

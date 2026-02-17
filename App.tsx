@@ -22,14 +22,27 @@ import ScrollCar from './components/ScrollCar';
 const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+  const [serviceInfo, setServiceInfo] = useState<{ title: string; price: string; description: string } | undefined>(undefined);
 
   const openTrialModal = () => {
     setModalMessage('Ik wil me graag aanmelden voor een gratis proefles.');
+    setServiceInfo(undefined);
     setIsModalOpen(true);
   };
 
   const handleSelectPackage = (packageName: string) => {
     setModalMessage(`Ik wil me graag aanmelden voor: ${packageName}`);
+    setServiceInfo(undefined);
+    setIsModalOpen(true);
+  };
+
+  const handleReadMoreTussentijdseToets = () => {
+    setModalMessage('Ik wil me graag aanmelden voor de Tussentijdse Toets.');
+    setServiceInfo({
+      title: 'Tussentijdse Toets',
+      price: '280',
+      description: 'Oefen het echte examen en vergroot je slagingskans. De tussentijdse toets is een perfecte manier om te ervaren hoe het echte examen verloopt en waar je nog extra aandacht aan moet besteden.'
+    });
     setIsModalOpen(true);
   };
 
@@ -50,7 +63,7 @@ const App: React.FC = () => {
 
         <div className="page-gradient-white-to-blue">
           <section id="pakketten" className="pt-20 pb-10 bg-transparent">
-            <Pricing onSelectPackage={handleSelectPackage} />
+            <Pricing onSelectPackage={handleSelectPackage} onReadMore={handleReadMoreTussentijdseToets} />
           </section>
 
           <section id="reviews" className="py-10 bg-transparent">
@@ -125,15 +138,15 @@ const App: React.FC = () => {
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
             onClick={() => setIsModalOpen(false)}
           ></div>
-          <div className="relative bg-white w-full max-w-xl rounded-3xl shadow-2xl overflow-hidden animate-modal">
+          <div className="relative bg-white/10 backdrop-blur-xl w-full max-w-xl rounded-3xl shadow-2xl overflow-hidden animate-modal border border-white/20">
             <button 
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-900 transition-colors z-10"
+              className="absolute top-4 right-4 p-2 text-white hover:text-slate-200 transition-colors z-10"
             >
               <X size={24} />
             </button>
             <div className="max-h-[90vh] overflow-y-auto">
-              <ContactForm initialMessage={modalMessage} isModal={true} />
+              <ContactForm initialMessage={modalMessage} isModal={true} serviceInfo={serviceInfo} />
             </div>
           </div>
         </div>
