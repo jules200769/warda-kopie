@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Award, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 const CARD_WIDTH = 320;
 const CARD_GAP = 24;
@@ -7,7 +7,7 @@ const CARD_TOTAL = CARD_WIDTH + CARD_GAP;
 const SLIDE_MS = 500;
 const CENTER_SCALE = 1.12;
 
-// Eigen afbeeldingen: plaats 8 foto’s in de map 'leerlingen' als leerling-1.jpg t/m leerling-8.jpg
+// Eigen afbeeldingen: plaats 8 foto's in de map 'leerlingen' als leerling-1.jpg t/m leerling-8.jpg
 // (of pas de paden hieronder aan naar je eigen bestandsnamen)
 const students = [
   { img: "/leerlingen/leerling-1.jpg" },
@@ -21,10 +21,16 @@ const students = [
 ];
 
 const COUNT = students.length;
-// Drie kopieën voor naadloze oneindige scroll (midden-set voor weergave)
-const INFINITE_STUDENTS = [...students, ...students, ...students];
+// Vijf kopieën voor naadloze oneindige scroll (extra buffer voor drag)
+const INFINITE_STUDENTS = [...students, ...students, ...students, ...students, ...students];
 const TOTAL = INFINITE_STUDENTS.length;
-const MIDDLE_START = COUNT; // start in het middenblok
+const MIDDLE_START = 2 * COUNT; // start in het middenblok (3e set)
+
+// Normaliseer index naar het bereik [2*COUNT, 3*COUNT - 1] (middelste set)
+const normalizeIndex = (i: number): number => {
+  const wrapped = ((i - 2 * COUNT) % COUNT + COUNT) % COUNT;
+  return 2 * COUNT + wrapped;
+};
 
 const StudentCard = ({ s, isCenter }: { s: typeof students[0]; isCenter?: boolean }) => (
   <div className="flex-shrink-0 flex items-center justify-center" style={{ width: CARD_WIDTH }}>
@@ -39,6 +45,7 @@ const StudentCard = ({ s, isCenter }: { s: typeof students[0]; isCenter?: boolea
         src={s.img}
         alt="Geslaagde leerling"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        draggable={false}
       />
     </div>
   </div>
@@ -50,6 +57,13 @@ const SuccessGallery: React.FC = () => {
   const [skipTransition, setSkipTransition] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Drag state (refs om stale closures te voorkomen in event handlers)
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const isDraggingRef = useRef(false);
+  const dragStartX = useRef(0);
+  const dragOffsetRef = useRef(0);
+
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
@@ -59,18 +73,13 @@ const SuccessGallery: React.FC = () => {
     return () => ro.disconnect();
   }, []);
 
-  // Naadloze reset rechts: einde midden-set → terug naar start midden-set
+  // Naadloze reset: normaliseer index naar middelste set voor oneindige loop
   useEffect(() => {
-    if (index !== 2 * COUNT) return;
-    setSkipTransition(true);
-    setIndex(MIDDLE_START);
-  }, [index]);
-
-  // Naadloze reset links: voor start midden-set → spring naar einde midden-set (tegengestelde richting)
-  useEffect(() => {
-    if (index !== COUNT - 1) return;
-    setSkipTransition(true);
-    setIndex(2 * COUNT - 1);
+    const normalized = normalizeIndex(index);
+    if (normalized !== index) {
+      setSkipTransition(true);
+      setIndex(normalized);
+    }
   }, [index]);
 
   useEffect(() => {
@@ -81,28 +90,84 @@ const SuccessGallery: React.FC = () => {
     return () => cancelAnimationFrame(id);
   }, [skipTransition]);
 
-  // Auto-play:zelfde tempo maar tegengestelde richting (naar links lopen = strip schuift naar rechts)
+  // Auto-play: pauzeert tijdens drag
   useEffect(() => {
+    if (isDragging) return;
     const interval = setInterval(() => {
       setIndex((i) => i - 1);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isDragging]);
 
-  const prev = () => {
-    setIndex((i) => i + 1);
+  // --- Drag handlers ---
+  const handleDragStart = (clientX: number) => {
+    isDraggingRef.current = true;
+    setIsDragging(true);
+    dragStartX.current = clientX;
+    dragOffsetRef.current = 0;
+    setDragOffset(0);
   };
-  const next = () => {
-    if (index <= MIDDLE_START) {
-      setSkipTransition(true);
-      setIndex(2 * COUNT - 1);
-    } else {
-      setIndex((i) => i - 1);
+
+  const handleDragMove = (clientX: number) => {
+    if (!isDraggingRef.current) return;
+
+    const offset = clientX - dragStartX.current;
+    dragOffsetRef.current = offset;
+    setDragOffset(offset);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDraggingRef.current) return;
+    isDraggingRef.current = false;
+
+    const offset = dragOffsetRef.current;
+    const cardsMoved = Math.round(offset / CARD_TOTAL);
+
+    setIsDragging(false);
+    
+    // Reset drag offset
+    setDragOffset(0);
+    dragOffsetRef.current = 0;
+
+    // Update index naar nieuwe positie
+    if (cardsMoved !== 0) {
+      setIndex((i) => i - cardsMoved);
     }
   };
 
+  // Mouse events
+  const onMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    handleDragStart(e.clientX);
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    handleDragMove(e.clientX);
+  };
+
+  const onMouseUp = () => {
+    handleDragEnd();
+  };
+
+  const onMouseLeave = () => {
+    handleDragEnd();
+  };
+
+  // Touch events
+  const onTouchStart = (e: React.TouchEvent) => {
+    handleDragStart(e.touches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    handleDragMove(e.touches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    handleDragEnd();
+  };
+
   const translateX = containerWidth > 0
-    ? containerWidth / 2 - CARD_WIDTH / 2 - index * CARD_TOTAL
+    ? containerWidth / 2 - CARD_WIDTH / 2 - index * CARD_TOTAL + dragOffset
     : 0;
 
   return (
@@ -118,20 +183,35 @@ const SuccessGallery: React.FC = () => {
               <Award size={24} />
             </div>
             <div className="text-left">
-              <div className="text-2xl font-bold text-white">92%</div>
+              <div className="text-2xl font-bold text-white">72%</div>
               <div className="text-sm text-slate-300">Slagingspercentage</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div ref={containerRef} className="w-full overflow-hidden py-4 relative">
+      <div
+        ref={containerRef}
+        className="w-full overflow-hidden py-4 relative"
+        style={{
+          cursor: isDragging ? 'grabbing' : 'grab',
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+        }}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
+        onMouseLeave={onMouseLeave}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         <div
           className="flex w-max"
           style={{
             gap: CARD_GAP,
             transform: `translateX(${translateX}px)`,
-            transition: skipTransition ? 'none' : `transform ${SLIDE_MS}ms ease-in-out`,
+            transition: (skipTransition || isDragging) ? 'none' : `transform ${SLIDE_MS}ms ease-in-out`,
           }}
         >
           {INFINITE_STUDENTS.map((s, i) => (
@@ -140,23 +220,6 @@ const SuccessGallery: React.FC = () => {
             </React.Fragment>
           ))}
         </div>
-
-        <button
-          type="button"
-          onClick={prev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
-          aria-label="Vorige"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          type="button"
-          onClick={next}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-slate-700 hover:bg-white transition-colors"
-          aria-label="Volgende"
-        >
-          <ChevronRight size={24} />
-        </button>
       </div>
     </div>
   );
