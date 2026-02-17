@@ -48,7 +48,7 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
         {/* Rechterkolom: afbeelding – grenst aan rechterzijde van de site */}
         <div className="relative min-h-[420px] lg:min-h-[520px] rounded-l-2xl overflow-hidden">
           <img
-            src="./waarom-achtergrond.jpg"
+            src="/waarom-achtergrond.jpg"
             alt="Interieur lesauto Rijschool Warda"
             className="w-full h-full object-cover object-center"
           />

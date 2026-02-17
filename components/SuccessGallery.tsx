@@ -10,14 +10,14 @@ const CENTER_SCALE = 1.12;
 // Eigen afbeeldingen: plaats 8 foto’s in de map 'leerlingen' als leerling-1.jpg t/m leerling-8.jpg
 // (of pas de paden hieronder aan naar je eigen bestandsnamen)
 const students = [
-  { img: "./leerlingen/leerling-1.jpg" },
-  { img: "./leerlingen/leerling-2.jpg" },
-  { img: "./leerlingen/leerling-3.jpg" },
-  { img: "./leerlingen/leerling-4.jpg" },
-  { img: "./leerlingen/leerling-5.jpg" },
-  { img: "./leerlingen/leerling-6.jpg" },
-  { img: "./leerlingen/leerling-7.jpg" },
-  { img: "./leerlingen/leerling-8.jpg" },
+  { img: "/leerlingen/leerling-1.jpg" },
+  { img: "/leerlingen/leerling-2.jpg" },
+  { img: "/leerlingen/leerling-3.jpg" },
+  { img: "/leerlingen/leerling-4.jpg" },
+  { img: "/leerlingen/leerling-5.jpg" },
+  { img: "/leerlingen/leerling-6.jpg" },
+  { img: "/leerlingen/leerling-7.jpg" },
+  { img: "/leerlingen/leerling-8.jpg" },
 ];
 
 const COUNT = students.length;

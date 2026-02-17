@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
       {/* Achtergrondafbeelding – plaats je eigen afbeelding in de projectmap als hero-achtergrond.jpg (of .png) */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="./hero-achtergrond.jpg" 
+          src="/hero-achtergrond.jpg" 
           alt="Rijschool Warda Lesauto" 
           className="w-full h-full object-cover object-center lg:object-[80%_center]"
         />
