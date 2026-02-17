@@ -9,10 +9,10 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
   return (
     <div className="relative min-h-[95vh] flex items-center pt-20 overflow-hidden bg-slate-50">
-      {/* Achtergrondafbeelding */}
+      {/* Achtergrondafbeelding – plaats je eigen afbeelding in de projectmap als hero-achtergrond.jpg (of .png) */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1621335829175-95f437384d7c?auto=format&fit=crop&q=80&w=2000" 
+          src="./hero-achtergrond.jpg" 
           alt="Rijschool Warda Lesauto" 
           className="w-full h-full object-cover object-center lg:object-[80%_center]"
         />
