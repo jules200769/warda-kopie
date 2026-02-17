@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const reviews = [
   {
@@ -54,7 +53,7 @@ const GoogleLogo = () => (
   </svg>
 );
 
-const StarIcon = ({ filled }: { filled: boolean }) => (
+const StarIcon: React.FC<{ filled: boolean }> = ({ filled }) => (
   <svg
     width="18"
     height="18"
@@ -66,7 +65,7 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
   </svg>
 );
 
-const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
+const ReviewCard: React.FC<{ review: typeof reviews[0] }> = ({ review }) => (
   <div className="flex-shrink-0 w-72 bg-white rounded-2xl p-6 shadow-lg">
     <h4 className="font-bold text-slate-900 text-base mb-2">{review.name}</h4>
     <div className="flex gap-0.5 mb-3">
@@ -84,7 +83,7 @@ const GoogleReviews: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Reviews</h2>
-          <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="flex items-center justify-center gap-3">
             <GoogleLogo />
             <span className="text-white/80 text-base font-medium">(4,8/5) Google</span>
             <div className="flex gap-0.5">
@@ -93,15 +92,6 @@ const GoogleReviews: React.FC = () => {
               ))}
             </div>
           </div>
-          <a
-            href="https://www.google.com/maps"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-full transition-colors shadow-lg"
-          >
-            Alle reviews
-            <ArrowRight size={18} />
-          </a>
         </div>
       </div>
 

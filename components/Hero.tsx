@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Star, Mail } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 interface HeroProps {
@@ -17,22 +17,18 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
           alt="Rijschool Warda Lesauto" 
           className="w-full h-full object-cover object-center lg:object-[80%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:via-white/20"></div>
+        <div className="absolute inset-0 bg-blue-900/50" aria-hidden />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/10 backdrop-blur-sm text-sky-600 text-sm font-bold mb-6 border border-sky-200">
-            Sinds 2009 • Nu beschikbaar in Udenhout
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.05] mb-6">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.05] mb-6">
             Rijbewijs halen? <br />
-            <span className="text-sky-500">Warda helpt je!</span>
+            <span className="text-sky-300">Warda helpt je!</span>
           </h1>
           
-          <p className="text-xl text-slate-700 font-medium mb-10 max-w-lg leading-relaxed">
-            Leer autorijden in onze moderne Volkswagen Golf. Al sinds 2009 bieden wij persoonlijke en geduldige begeleiding voor alle leerlingen.
+          <p className="text-xl text-white/95 font-medium mb-10 max-w-lg leading-relaxed">
+            Leer autorijden in onze moderne Volkswagen Golf.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -49,31 +45,12 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
                 href="https://wa.me/31649674309" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-emerald-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all flex items-center gap-2 pr-6"
+                className="bg-emerald-500 text-white p-4 rounded-full shadow-lg animate-green-glow hover:scale-110 transition-all flex items-center gap-2 pr-6"
               >
                 <WhatsAppIcon size={24} />
                 <span className="font-bold">WhatsApp</span>
               </a>
               <a href="mailto:Autorijschoolwarda@hotmail.com" className="bg-white text-slate-900 p-4 rounded-full shadow-lg border hover:scale-110 transition-all"><Mail size={24} /></a>
-            </div>
-          </div>
-          
-          <div className="mt-14 flex items-center gap-6">
-            <div className="flex -space-x-3">
-              {['/review-1.png', '/review-2.png', '/review-3.png', '/review-4.png'].map((src, i) => (
-                <img 
-                  key={i} 
-                  src={src} 
-                  alt="Tevreden leerling" 
-                  className="w-14 h-14 rounded-full border-4 border-white object-cover shadow-md" 
-                />
-              ))}
-            </div>
-            <div>
-              <div className="flex text-amber-400 mb-1">
-                {[1, 2, 3, 4, 5].map(star => <Star key={star} size={18} fill="currentColor" />)}
-              </div>
-              <p className="text-sm text-slate-700 font-bold uppercase tracking-wider">Topbeoordeling sinds 2009</p>
             </div>
           </div>
         </div>

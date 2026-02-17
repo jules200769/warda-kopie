@@ -22,14 +22,8 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
             Rijles Udenhout
           </h2>
-          <p className="text-slate-600 leading-relaxed mb-4">
-            Bij Rijschool Warda krijg je kwalitatieve rijlessen in een vertrouwde omgeving. Sinds 2009 helpen wij leerlingen uit Udenhout en omgeving met een persoonlijke aanpak, zodat jij met een veilig gevoel je rijbewijs haalt.
-          </p>
-          <p className="text-slate-600 leading-relaxed mb-4">
-            Wij bereiden je doelgericht voor op het CBR-examen, met ervaren en geduldige instructeurs en een moderne Volkswagen Golf. Geen wachtlijst — je kunt direct starten.
-          </p>
           <p className="text-slate-600 leading-relaxed mb-8">
-            Benieuwd of rijles bij ons bij je past? Vraag een gratis proefles aan of bekijk onze tarieven.
+            Sinds 2009 bieden wij persoonlijke rijlessen in een vertrouwde omgeving voor leerlingen uit Udenhout en omgeving. Met ervaren instructeurs en een moderne Volkswagen Golf bereiden wij je doelgericht voor op het CBR-examen — zonder wachtlijst.
           </p>
           <div className="flex flex-wrap gap-4">
             <button

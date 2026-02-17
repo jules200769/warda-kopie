@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             href="https://wa.me/31649674309" 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-emerald-100"
+            className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-emerald-100 animate-green-glow"
           >
             <WhatsAppIcon size={18} />
             <span>WhatsApp</span>
@@ -85,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       </div>
 
       {/* Mobile Nav */}
-      <div className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-2xl transition-all duration-300 transform origin-top ${isOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
+      <div className={`md:hidden absolute top-[calc(100%-8px)] left-0 right-0 mt-2 rounded-2xl bg-white/100 backdrop-blur-xl shadow-2xl transition-all duration-300 transform origin-top ${isOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
         <div className="flex flex-col p-6 gap-2">
           {navLinks.map((link) => (
             <a 
@@ -101,7 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             href="https://wa.me/31649674309" 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-emerald-500 text-white p-5 rounded-2xl font-black flex items-center justify-center gap-3 mt-4 shadow-xl active:scale-95 transition-transform"
+            className="bg-emerald-500 text-white p-5 rounded-2xl font-black flex items-center justify-center gap-3 mt-4 shadow-xl active:scale-95 transition-transform animate-green-glow"
           >
             <WhatsAppIcon size={22} />
             WHATSAPP

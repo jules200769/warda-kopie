@@ -102,12 +102,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© {new Date().getFullYear()} Rijschool Warda. Alle rechten voorbehouden.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Algemene Voorwaarden</a>
-            <a href="#" className="hover:text-white">Privacy Policy</a>
+        <div className="pt-8 border-t border-slate-800 flex flex-col gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <p>© {new Date().getFullYear()} Rijschool Warda. Alle rechten voorbehouden.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-white">Algemene Voorwaarden</a>
+              <a href="#" className="hover:text-white">Privacy Policy</a>
+            </div>
           </div>
+          <p className="text-xs text-slate-500">
+            Gemaakt met liefde en plezier door{' '}
+            <a href="https://www.nickvd-websites.com" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 transition-colors">
+              www.nickvd-websites.com
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>
