@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
           </h1>
           
           <p className="text-xl text-white/95 font-medium mb-10 max-w-lg leading-relaxed">
-            Leer autorijden in mijn moderne Volkswagen Golf.
+            Leer autorijden in mijn moderne Audi A3.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
