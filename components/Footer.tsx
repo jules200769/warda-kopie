@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start gap-3 group">
                 <Mail size={18} className="text-sky-500 group-hover:scale-110 transition-transform mt-1 shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="mailto:info@rijschoolcaran.nl" className="hover:text-white transition-colors break-all">info@rijschoolcaran.nl</a>
+                  <a href="mailto:autorijschoolcaran@hotmail.nl" className="hover:text-white transition-colors break-all">autorijschoolcaran@hotmail.nl</a>
                 </div>
               </li>
               <li className="flex items-center gap-3">

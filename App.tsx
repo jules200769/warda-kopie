@@ -107,7 +107,7 @@ const App: React.FC = () => {
                         </div>
                         <div>
                           <p className="text-sm text-slate-400">E-mail</p>
-                          <a href="mailto:info@rijschoolcaran.nl" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">info@rijschoolcaran.nl</a>
+                          <a href="mailto:autorijschoolcaran@hotmail.nl" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">autorijschoolcaran@hotmail.nl</a>
                         </div>
                       </div>
 

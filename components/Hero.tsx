@@ -50,7 +50,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
                 <WhatsAppIcon size={24} />
                 <span className="font-bold">WhatsApp</span>
               </a>
-              <a href="mailto:info@rijschoolcaran.nl" className="bg-white text-slate-900 p-4 rounded-full shadow-lg border hover:scale-110 transition-all"><Mail size={24} /></a>
+              <a href="mailto:autorijschoolcaran@hotmail.nl" className="bg-white text-slate-900 p-4 rounded-full shadow-lg border hover:scale-110 transition-all"><Mail size={24} /></a>
             </div>
           </div>
         </div>
