@@ -25,7 +25,7 @@ const reviews = [
   {
     name: 'Sara El Mahdi',
     stars: 5,
-    text: 'Heel blij dat ik voor Rijschool Warda heb gekozen. De instructeur is erg geduldig en legt alles rustig uit. In één keer geslaagd!',
+    text: 'Heel blij dat ik voor Rijschool Caran heb gekozen. De instructeur is erg geduldig en legt alles rustig uit. In één keer geslaagd!',
   },
   {
     name: 'Thomas Bakker',
@@ -40,7 +40,7 @@ const reviews = [
   {
     name: 'Daan Vermeulen',
     stars: 5,
-    text: 'Aanrader voor iedereen! Goede uitleg, moderne auto en een instructeur die echt om je geeft. Bedankt Rijschool Warda!',
+    text: 'Aanrader voor iedereen! Goede uitleg, moderne auto en een instructeur die echt om je geeft. Bedankt Rijschool Caran!',
   },
 ];
 

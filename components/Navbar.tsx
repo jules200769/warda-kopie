@@ -49,9 +49,9 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
     <nav className={`fixed top-4 left-4 right-4 z-50 rounded-2xl transition-all duration-300 ${scrolled ? 'bg-white/40 backdrop-blur-xl shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <a href="#home" onClick={handleLogoClick} className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:rotate-12 transition-transform">W</div>
+          <div className="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:rotate-12 transition-transform">C</div>
           <span className={`font-bold text-xl tracking-tight transition-colors duration-300 ${scrolled ? 'text-slate-900' : 'text-white'}`}>
-            Rijschool <span className={scrolled ? 'text-sky-500' : 'text-white'}>Warda</span>
+            Rijschool <span className={scrolled ? 'text-sky-500' : 'text-white'}>Caran</span>
           </span>
         </a>
 

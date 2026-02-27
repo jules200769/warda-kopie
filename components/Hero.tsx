@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
       <div className="absolute inset-0 z-0">
         <img 
           src="/hero-achtergrond.jpg" 
-          alt="Rijschool Warda Lesauto" 
+          alt="Rijschool Caran Lesauto" 
           className="w-full h-full object-cover object-center lg:object-[80%_center]"
         />
         <div className="absolute inset-0 bg-blue-900/50" aria-hidden />
@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.05] mb-6">
             Rijbewijs halen? <br />
-            <span className="text-sky-300">Warda helpt je!</span>
+            <span className="text-sky-300">Caran helpt je!</span>
           </h1>
           
           <p className="text-xl text-white/95 font-medium mb-10 max-w-lg leading-relaxed">
@@ -50,7 +50,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
                 <WhatsAppIcon size={24} />
                 <span className="font-bold">WhatsApp</span>
               </a>
-              <a href="mailto:Autorijschoolwarda@hotmail.com" className="bg-white text-slate-900 p-4 rounded-full shadow-lg border hover:scale-110 transition-all"><Mail size={24} /></a>
+              <a href="mailto:info@rijschoolcaran.nl" className="bg-white text-slate-900 p-4 rounded-full shadow-lg border hover:scale-110 transition-all"><Mail size={24} /></a>
             </div>
           </div>
         </div>

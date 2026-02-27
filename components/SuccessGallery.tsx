@@ -32,21 +32,20 @@ const normalizeIndex = (i: number): number => {
   return 2 * COUNT + wrapped;
 };
 
-const StudentCard = ({ s, isCenter }: { s: typeof students[0]; isCenter?: boolean }) => (
+const StudentCard = ({ isCenter }: { s: typeof students[0]; isCenter?: boolean }) => (
   <div className="flex-shrink-0 flex items-center justify-center" style={{ width: CARD_WIDTH }}>
     <div
-      className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-100 shadow-lg origin-center transition-transform duration-300 ease-out"
+      className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-100 shadow-lg origin-center transition-transform duration-300 ease-out flex items-center justify-center"
       style={{
         width: CARD_WIDTH,
         transform: isCenter ? `scale(${CENTER_SCALE})` : 'scale(1)',
       }}
     >
-      <img
-        src={s.img}
-        alt="Geslaagde leerling"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        draggable={false}
-      />
+      {isCenter && (
+        <p className="text-slate-500 text-center text-sm font-medium px-4">
+          Afbeedingen van uw succesvolle studenten
+        </p>
+      )}
     </div>
   </div>
 );
@@ -176,7 +175,7 @@ const SuccessGallery: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Geslaagde Leerlingen</h2>
           <p className="text-lg text-slate-200 mb-6 max-w-2xl mx-auto">
-            Trotse gezichten van leerlingen die hun rijbewijs bij Rijschool Warda haalden. Jij bent de volgende!
+            Trotse gezichten van leerlingen die hun rijbewijs bij Rijschool Caran haalden. Jij bent de volgende!
           </p>
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl border border-white/20">
             <div className="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-white shrink-0">

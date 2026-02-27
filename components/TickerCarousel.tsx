@@ -34,7 +34,7 @@ const TickerCarousel: React.FC = () => {
     <div
       className="bg-[#1e3a5f] py-3 overflow-hidden border-y border-sky-900/50"
       role="region"
-      aria-label="Voordelen Rijschool Warda"
+      aria-label="Voordelen Rijschool Caran"
     >
       <div className="ticker-track flex w-max">
         <div className="flex items-center text-white text-sm md:text-base font-medium px-4">

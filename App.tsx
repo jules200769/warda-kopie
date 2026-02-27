@@ -107,8 +107,7 @@ const App: React.FC = () => {
                         </div>
                         <div>
                           <p className="text-sm text-slate-400">E-mail</p>
-                          <a href="mailto:Autorijschoolwarda@hotmail.com" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">Autorijschoolwarda@hotmail.com</a>
-                          <a href="mailto:info@rijschoolwarda.nl" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">info@rijschoolwarda.nl</a>
+                          <a href="mailto:info@rijschoolcaran.nl" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">info@rijschoolcaran.nl</a>
                         </div>
                       </div>
 
@@ -118,7 +117,7 @@ const App: React.FC = () => {
                         </div>
                         <div>
                           <p className="text-sm text-slate-400">Locatie</p>
-                          <p className="text-lg font-semibold text-white">Udenhout, Nederland</p>
+                          <p className="text-lg font-semibold text-white">Nederland</p>
                         </div>
                       </div>
                     </div>

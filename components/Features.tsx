@@ -24,7 +24,7 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
               Over Mij
             </h2>
             <p className="text-slate-700 leading-relaxed">
-              Sinds 2009 ben ik jouw betrouwbare rij-instructeur in Udenhout en omgeving. Met jarenlange ervaring en een passie voor lesgeven, help ik je op een persoonlijke en geduldige manier naar je rijbewijs. Ik werk met een moderne Volkswagen Golf en zorg voor een veilige, ontspannen leeromgeving waar jij je op je gemak voelt. Mijn doel is niet alleen dat je slaagt voor je examen, maar ook dat je een zelfverzekerde en veilige bestuurder wordt. Geen wachtlijsten, directe aandacht en een aanpak die bij jou past — dat is wat je van mij kunt verwachten.
+              Al jaren zijn we jouw betrouwbare rijschool in de regio. Met jarenlange ervaring en een passie voor lesgeven, helpen we je op een persoonlijke en geduldige manier naar je rijbewijs. We werken met een moderne lesauto en zorgen voor een veilige, ontspannen leeromgeving waar jij je op je gemak voelt. Ons doel is niet alleen dat je slaagt voor je examen, maar ook dat je een zelfverzekerde en veilige bestuurder wordt. Geen wachtlijsten, directe aandacht en een aanpak die bij jou past — dat is wat je van ons kunt verwachten.
             </p>
           </div>
           <div className="flex flex-wrap gap-4 mt-8">
@@ -51,7 +51,7 @@ const Features: React.FC<FeaturesProps> = ({ onTrialClick }) => {
         <div className="relative min-h-[420px] lg:min-h-[520px] rounded-l-2xl overflow-hidden">
           <img
             src="/waarom-achtergrond.jpg"
-            alt="Interieur lesauto Rijschool Warda"
+            alt="Interieur lesauto Rijschool Caran"
             className="w-full h-full object-cover object-center"
           />
         </div>
