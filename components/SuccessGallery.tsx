@@ -7,17 +7,16 @@ const CARD_TOTAL = CARD_WIDTH + CARD_GAP;
 const SLIDE_MS = 500;
 const CENTER_SCALE = 1.12;
 
-// Eigen afbeeldingen: plaats 8 foto's in de map 'leerlingen' als leerling-1.jpg t/m leerling-8.jpg
-// (of pas de paden hieronder aan naar je eigen bestandsnamen)
+// Foto's van geslaagde leerlingen (leerling-1.jpg t/m leerling-8.jpg in public/)
 const students = [
-  { img: "/leerlingen/leerling-1.jpg" },
-  { img: "/leerlingen/leerling-2.jpg" },
-  { img: "/leerlingen/leerling-3.jpg" },
-  { img: "/leerlingen/leerling-4.jpg" },
-  { img: "/leerlingen/leerling-5.jpg" },
-  { img: "/leerlingen/leerling-6.jpg" },
-  { img: "/leerlingen/leerling-7.jpg" },
-  { img: "/leerlingen/leerling-8.jpg" },
+  { img: "/leerling-1.jpg" },
+  { img: "/leerling-2.jpg" },
+  { img: "/leerling-3.jpg" },
+  { img: "/leerling-4.jpg" },
+  { img: "/leerling-5.jpg" },
+  { img: "/leerling-6.jpg" },
+  { img: "/leerling-7.jpg" },
+  { img: "/leerling-8.jpg" },
 ];
 
 const COUNT = students.length;
@@ -32,7 +31,7 @@ const normalizeIndex = (i: number): number => {
   return 2 * COUNT + wrapped;
 };
 
-const StudentCard = ({ isCenter }: { s: typeof students[0]; isCenter?: boolean }) => (
+const StudentCard = ({ s, isCenter }: { s: typeof students[0]; isCenter?: boolean }) => (
   <div className="flex-shrink-0 flex items-center justify-center" style={{ width: CARD_WIDTH }}>
     <div
       className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-100 shadow-lg origin-center transition-transform duration-300 ease-out flex items-center justify-center"
@@ -41,11 +40,11 @@ const StudentCard = ({ isCenter }: { s: typeof students[0]; isCenter?: boolean }
         transform: isCenter ? `scale(${CENTER_SCALE})` : 'scale(1)',
       }}
     >
-      {isCenter && (
-        <p className="text-slate-500 text-center text-sm font-medium px-4">
-          Afbeedingen van uw succesvolle studenten
-        </p>
-      )}
+      <img
+        src={s.img}
+        alt="Geslaagde leerling"
+        className="w-full h-full object-cover"
+      />
     </div>
   </div>
 );

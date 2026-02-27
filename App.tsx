@@ -91,12 +91,12 @@ const App: React.FC = () => {
                         <div>
                           <p className="text-sm text-slate-400">WhatsApp</p>
                           <a 
-                            href="https://wa.me/31649674309" 
+                            href="https://wa.me/31655775696" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="text-lg font-semibold text-white hover:text-emerald-300 transition-colors"
                           >
-                            06 49674309
+                            06 55775696
                           </a>
                         </div>
                       </div>

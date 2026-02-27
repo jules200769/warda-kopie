@@ -14,28 +14,28 @@ const Pricing: React.FC<PricingProps> = ({ onSelectPackage, onReadMore }) => {
   const packs = [
     {
       name: "Losse Rijles",
-      price: "62",
+      price: "45",
       lessons: "1 les van 60 min",
       popular: false,
       features: ["Betaling per les", "Flexibel inplannen", "Moderne lesauto", "Geduldige instructeur"]
     },
     {
       name: "Pakket 1",
-      price: "1510",
+      price: "1250",
       lessons: "20 Lessen",
       popular: false,
       features: ["Inclusief praktijkexamen", "Voordeliger tarief", "Vaste begeleiding", "Persoonlijk lesplan"]
     },
     {
       name: "Pakket 2",
-      price: "2090",
+      price: "1700",
       lessons: "30 Lessen",
       popular: true,
       features: ["Inclusief praktijkexamen", "Meest gekozen", "Inclusief lesmateriaal", "Optimale voorbereiding"]
     },
     {
       name: "Pakket 3",
-      price: "2670",
+      price: "2150",
       lessons: "40 Lessen",
       popular: false,
       features: ["Inclusief praktijkexamen", "Complete ontzorging", "Hoogste slaagkans", "Volledig pakket"]

@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="mb-6 leading-relaxed">
-              Al jaren bieden we professionele rijopleidingen in de regio. Jouw veiligheid en succes zijn onze hoogste prioriteit.
+              Al jaren bied ik professionele rijopleidingen in de regio. Jouw veiligheid en succes zijn mijn hoogste prioriteit.
             </p>
             <div className="flex gap-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all transform hover:-translate-y-1">
@@ -48,12 +48,12 @@ const Footer: React.FC = () => {
               <li className="flex items-center gap-3 group">
                 <WhatsAppIcon size={18} className="text-emerald-500 group-hover:scale-110 transition-transform" />
                 <a 
-                  href="https://wa.me/31649674309" 
+                  href="https://wa.me/31655775696" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-white transition-colors"
                 >
-                  WhatsApp: 06 49674309
+                  WhatsApp: 06 55775696
                 </a>
               </li>
               <li className="flex items-start gap-3 group">
