@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ onTrialClick }) => {
         <img 
           src="/hero-achtergrond.jpg" 
           alt="Rijschool Caran Lesauto" 
-          className="w-full h-full object-cover object-center lg:object-[80%_center]"
+          className="w-full h-full object-cover object-[70%_40%] lg:object-[80%_center]"
         />
         <div className="absolute inset-0 bg-blue-900/50" aria-hidden />
       </div>
